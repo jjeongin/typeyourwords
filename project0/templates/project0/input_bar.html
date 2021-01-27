@@ -1,0 +1,44 @@
+{% extends 'project0/base.html' %}
+
+{% block content %}
+
+<center>
+  <form id="input-form" method="POST" class="input-bar">
+    {% csrf_token %}
+    <input type="text" id="word" name="word" placeholder="Type Your Words">
+    <!-- <div class='img_w'> {{ form.img_w }} </div>
+    <div class='img_h'> {{ form.img_h }} </div> -->
+    <!-- <div class='img_w'> {{ form.img_w }} </div>
+    <div class='img_h'> {{ form.img_h }} </div> -->
+    <!-- <input allign='middle' type="text" id="word" name="word" placeholder="Type your words"> -->
+    <!-- <input id='img_w' name='img_w' type="number">
+    <input id='img_h' name='img_h' type="number"> -->
+    <!-- <div class='img_w'> {{ word.img_w }} </div>
+    <div class='img_h'> {{ word.img_h }} </div> -->
+    <input id="submit" type="submit" style="display: none"/>
+  </form>
+</center>
+
+{% endblock %}
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+<!-- <script src="static/project0.js"></script> -->
+
+<!-- <script type="text/javascript">
+  // var screenW = document.getElementById('{{ form.img_w.id_for_label }}');
+  // screenW.value = screen.width;
+  // var screenH = document.getElementById('{{ form.img_h.id_for_label }}');
+  // screenH.value = screen.height;
+  // $( "#input-form" ).submit(function( event ) {
+  $(window).load( function() {
+    // $("#" + '{{ form.img_w.id_for_label }}').val() = screen.width;
+    // $("#" + '{{ form.img_h.id_for_label }}').val() = screen.height;
+    document.getElementById('{{ form.img_w.id_for_label }}').value = screen.width;
+    document.getElementById('{{ form.img_h.id_for_label }}').value = screen.height;
+  // });
+  // $( "#input-form" ).submit(function( event ) {
+  //       $("#img_w").val(screen.width);
+  //       $("#img_h").val(screen.height);
+  })
+</script> -->

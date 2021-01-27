@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body {
+    line-height: 1;
+}
+
+.wrapper {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.header {
+	background-color: white;
+	color: black;
+	padding: 30px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.logo {
+	flex: none;
+	margin: auto;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropbtn {
+	width:30px;
+	height:30px;
+	appearance:none;
+	background-color: #000;
+	cursor: pointer;
+	padding: 0px;
+	border-radius: 50%;
+	border: 0;
+	position: relative;
+}
+
+.dropbtn::before {
+	/* Positioning related code */
+	content: "";
+	display: block;
+	width: 50%; /* width and height must be always equal */
+	height: 50%;
+	background: #000;
+	pointer-events: none;
+	/* this allows optical centering if required */
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	/* Masking code */
+	mask-image: url('btn_b.svg');
+	mask-position: center;
+	mask-repeat: no-repeat;
+	mask-size: contain; 
+}
+
+.dropdown-content {
+	right: 4px;
+	left: auto;
+	display: none;
+	position: absolute;
+	background-color: #ffffff;
+	min-width: 160px;
+	/* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1; */
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 27px 16px;
+	text-decoration: none;
+	font-size: 30px;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: bold;
+	text-align: right;
+	display: block;
+}
+
+.dropdown-content a:hover {background-color: white;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.input-bar input[type=text] 
+{
+	width: 90%;
+	padding: 20px 20px;
+	margin: 220px auto;
+	box-sizing: border-box;
+	border: none;
+	background-color: #000000;
+	color: white;
+}
+
+.output-image {
+	width: 100%;
+	height: auto;
+}
+
+.hover-bar {
+	width: 100vw;
+	height: 12vh;
+	position: fixed;
+	top: 0;
+}
+
+.white-hover-bar {
+	display: none;
+	background-color: white;
+	position:relative;
+	width: 100vw;
+	height: 12vh;
+}
+
+.black-hover-bar {
+	display: none;
+	background-color: black;
+	position:relative;
+	width: 100vw;
+	height: 12vh;
+}
+
+.exitbtn {
+	margin: 2vw;
+}
+
+.hover-bar:hover .black-hover-bar{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	flex-wrap: wrap;
+}
+
+.hover-bar:hover .white-hover-bar{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	flex-wrap: wrap;
+}
+
+.content-container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	flex: 1;
+}
+
+.gallery{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.word {
+	position: relative;
+}
+
+.word-thumb {
+	display: block;
+	/* width: 100%;
+	height: auto; */
+}
+
+.date-container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #000;
+}
+
+.word-date {
+	color:white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.word:hover .date-container {
+	opacity: 0.5;
+}
+
+.footer{
+	background-color:white;
+	color:black;
+	text-align: right;
+	font-size: 12px;
+	padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+	width: 100%;
+}
+
+/* @media only screen and (max-width: 767px) { */
+	/* For smartphones: */
+	/* .col-s-1 {width: 8.33%;}
+	.col-s-2 {width: 16.66%;}
+	.col-s-3 {width: 25%;}
+	.col-s-4 {width: 33.33%;}
+	.col-s-5 {width: 41.66%;}
+	.col-s-6 {width: 50%;}
+	.col-s-7 {width: 58.33%;}
+	.col-s-8 {width: 66.66%;}
+	.col-s-9 {width: 75%;}
+	.col-s-10 {width: 83.33%;}
+	.col-s-11 {width: 91.66%;}
+	.col-s-12 {width: 100%;}
+}  */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	/* For tablets: */
+	.col-s-1 {width: 8.33%;}
+	.col-s-2 {width: 16.66%;}
+	.col-s-3 {width: 25%;}
+	.col-s-4 {width: 33.33%;}
+	.col-s-5 {width: 41.66%;}
+	.col-s-6 {width: 50%;}
+	.col-s-7 {width: 58.33%;}
+	.col-s-8 {width: 66.66%;}
+	.col-s-9 {width: 75%;}
+	.col-s-10 {width: 83.33%;}
+	.col-s-11 {width: 91.66%;}
+	.col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 1024px) {
+	/* For desktop: */
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+}
+
+/* Change the background color on mouse-over
+.header a:hover {
+background-color: #ddd;
+color: black;
+} */
+
+/* Style the active/current link*/
+/* .header a.active {
+background-color: dodgerblue;
+color: white;
+} */

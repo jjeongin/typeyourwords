@@ -1,0 +1,41 @@
+{% extends 'project0/base.html' %}
+{% load imagefit %}
+{% load static %}
+
+{% block content %}
+<div class="gallery">
+    {% for word in words %}
+        <div class="word">
+            <a href="{% url 'output_image' pk=word.pk %}">
+                    <img src="{{ word.image.url|resize:'900x900,C' }}" class=word-thumb width=300px height=300px/>
+            </a>
+
+            <div class="date-container">
+                <div class="word-date">
+                    {{ word.formatted_date }}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<script type="text/javascript">
+    // const windowInnerWidth  = window.innerWidth;
+    // const windowInnerHeight = window.innerHeight;
+$(window).load(function () {
+    windowHeight = $(window).height(); 
+    windowWidth = $(window).width(); 
+    documentHeight = $(document).height(); 
+    documentWidth = $(document).width();
+
+    document.querySelector('.windowHeight').textContent 
+                = windowHeight; 
+    document.querySelector('.windowWidth').textContent 
+                = windowWidth; 
+    document.querySelector('.documentHeight').textContent 
+                = documentHeight; 
+    document.querySelector('.documentWidth').textContent 
+                = documentWidth; 
+});
+</script>
+{% endblock %}
