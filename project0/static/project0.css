@@ -126,7 +126,7 @@ body {
 	background-color: white;
 	position:relative;
 	width: 100vw;
-	height: 12vh;
+	height: 15vh;
 }
 
 .black-hover-bar {
@@ -134,11 +134,11 @@ body {
 	background-color: black;
 	position:relative;
 	width: 100vw;
-	height: 12vh;
+	height: 15vh;
 }
 
 .exitbtn {
-	margin: 2vw;
+	margin: 6vmin;
 }
 
 .hover-bar:hover .black-hover-bar{
@@ -171,7 +171,7 @@ body {
 }
 
 .archive{
-	background-color: black;
+	background-color: white;
 	width: 90%;
 	display: flex;
 	flex-wrap: wrap;
@@ -215,14 +215,19 @@ body {
 
 .footer{
 	background-color:white;
-	color:black;
+	color:grey;
 	text-align: center;
 	font-size: 12px;
-	padding: 15px;
 	position: fixed;
+	padding: 3vh;
 	left: 0;
 	bottom: 0;
 	width: 100%;
+}
+
+p {
+	margin: .5px;
+    padding: 0;
 }
 
 .about {
