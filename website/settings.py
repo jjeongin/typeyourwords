@@ -27,7 +27,7 @@ SECRET_KEY = '6%#vvo3)9l^)%oxxc45hp1i^035h77=vmp-2xa9_%$yzzcqs#c'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'yoonjoocho.pythonanywhere.com',
+    'localhost',
     'typeyourwords.com',
 ]
 
@@ -135,3 +135,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'project0/media/')
 
 IMAGEFIT_ROOT = 'project0'
+# Use this instead for the pythonanywhere env
+# IMAGEFIT_ROOT = 'typeyourwords/project0'

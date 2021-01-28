@@ -19,8 +19,6 @@
   </form>
 </center>
 
-{% endblock %}
-
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
 <!-- <script src="static/project0.js"></script> -->
@@ -42,3 +40,41 @@
   //       $("#img_h").val(screen.height);
   })
 </script> -->
+
+<!-- <script type="text/javascript">
+  // const windowInnerWidth  = window.innerWidth;
+  // const windowInnerHeight = window.innerHeight;
+$(window).load(function () {
+  windowHeight = $(window).height(); 
+  windowWidth = $(window).width(); 
+  // documentHeight = $(document).height(); 
+  // documentWidth = $(document).width();
+
+  document.querySelector('.windowHeight').textContent 
+              = windowHeight; 
+  document.querySelector('.windowWidth').textContent 
+              = windowWidth; 
+              $(document).ready(function() {
+});
+$(document).ready(function() {
+  $.ajax({
+          method: 'POST',
+          url: '/path/to/your/view/',
+          data: {
+              width        : $(window).width(),
+              height       : $(window).height(),
+              screen_width : screen.width,
+              screen_height: screen.height
+          },
+          success: function (data) {
+              //this gets called when server returns an OK response
+              alert("it worked!");
+          },
+          error: function (data) {
+              alert("it didnt work");
+          }
+      });
+});
+</script> -->
+
+{% endblock %}

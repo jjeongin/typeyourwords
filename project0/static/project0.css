@@ -164,10 +164,18 @@ body {
 	flex: 1;
 }
 
-.gallery{
+.archive-container {
 	display:flex;
-	flex-wrap: wrap;
+	background-color: white;
 	justify-content: center;
+}
+
+.archive{
+	background-color: black;
+	width: 90%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
 }
 
 .word {
@@ -176,8 +184,6 @@ body {
 
 .word-thumb {
 	display: block;
-	/* width: 100%;
-	height: auto; */
 }
 
 .date-container {
@@ -210,9 +216,22 @@ body {
 .footer{
 	background-color:white;
 	color:black;
-	text-align: right;
+	text-align: center;
 	font-size: 12px;
 	padding: 15px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.about {
+	font-size: 30px;
+	text-align: center;
+	background-color:white;
+	color:black;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: bold;
 }
 
 /* For mobile phones: */

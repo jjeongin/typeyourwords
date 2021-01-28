@@ -14,9 +14,6 @@ import os
 path = os.getcwd()
 
 def convert_word(word):
-    word = list(word.lower())
-    shuffle(word)
-
     # width, height = pyautogui.size()
     global bg_color
     rand = randint(0,1)
@@ -28,13 +25,20 @@ def convert_word(word):
         bg_color = "b"
 
     f_imgs = [] # [[img_x, img_y, size], ...]
+
+    word = list(word)
+    shuffle(word)
     for alpha in word:
-        # Open the alphabet image
-        rand = randint(0,1)
-        if rand == 0:
-            alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/' + alpha + '.png')
+        if alpha.isdigit() == True:
+            alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '.png')
         else:
-            alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/' + alpha + ' invert.png')
+            alpha = alpha.lower()
+            # Open the alphabet image
+            rand = randint(0,1)
+            if rand == 0:
+                alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '.png')
+            else:
+                alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + ' invert.png')
         
         # Fix the upper left corner of the image
         arranged = False
@@ -105,4 +109,7 @@ def output_image(request, pk):
 def output_list(request):
     # words = Word.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
     words = Word.objects.all().order_by('-created_date')
-    return render(request, 'project0/gallery.html', {'words': words})
+    return render(request, 'project0/archive.html', {'words': words})
+
+def about_page(request):
+    return render(request, 'project0/about.html')
