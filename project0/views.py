@@ -30,15 +30,18 @@ def convert_word(word):
     shuffle(word)
     for alpha in word:
         if alpha.isdigit() == True:
-            alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '.png')
+            alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/' + alpha + '.png')
+            # alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '.png')
         else:
             alpha = alpha.lower()
             # Open the alphabet image
             rand = randint(0,1)
             if rand == 0:
-                alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '.png')
+                alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/' + alpha + '.png')
+                # alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '.png')
             else:
-                alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + ' invert.png')
+                alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/' + alpha + ' invert.png')
+                # alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + ' invert.png')
         
         # Fix the upper left corner of the image
         arranged = False
