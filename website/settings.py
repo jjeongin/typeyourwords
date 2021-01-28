@@ -26,7 +26,10 @@ SECRET_KEY = '6%#vvo3)9l^)%oxxc45hp1i^035h77=vmp-2xa9_%$yzzcqs#c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'yoonjoocho.pythonanywhere.com',
+    'typeyourwords.com',
+]
 
 
 # Application definition
@@ -123,12 +126,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = ( 
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'typeyourwords/project0/static'),
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'project0/static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'typeyourwords/project0/static/')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'project0/media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'typeyourwords/project0/media/')
 
-IMAGEFIT_ROOT = 'project0'
+IMAGEFIT_ROOT = 'typeyourwords/project0'
