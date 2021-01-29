@@ -219,6 +219,7 @@ body {
 	text-align: center;
 	font-size: 12px;
 	position: fixed;
+	z-index:3;
 	padding: 3vh;
 	left: 0;
 	bottom: 0;
@@ -230,8 +231,8 @@ footer p {
     padding: 0;
 }
 
-/* .about {
-	background-image: url("about.jpg");
+/* .about-bg {
+	background-image: url("about_bg.jpg");
 
 	height: 100%; 
 	background-position: center;
@@ -239,29 +240,31 @@ footer p {
 	background-size: cover;
 } */
 
-.about-page-container{
-	/* display: flex;
-    flex-direction: row; */
-    position: absolute;
+.about-bg {
+	position:relative;
+	width: 100%;
+	height: auto;
+	z-index:1;
 }
 
-.about-content{
+/* .about-page-container{
 	position: relative;
-	/* left:0; */
-	/* top: 50%;
-	left: 50%;
-	background: #f00;
-	transform: translate(-50%, -50%); */
-	/* width: 30vw;
-	height: auto; */
-	
+} */
+
+/* .about-content{
+	position: relative;
+	left:-136px;
+	top:-20px;
+	width:1750px;
+	height:1067px;
+	background-color: white;
 }
 
 .about-block {
 	position: absolute;
 	height: 417px;
-	width: 945px;
-	left: 848px;
+	width: 54vw;
+	left: 48.457vw;
 	top: 86px;
 	border-radius: 0px;
 	background: #000000;
@@ -271,8 +274,8 @@ footer p {
 .white-line {
 	position: absolute;
 	height: 0px;
-	width: 49px;
-	left: 1126px;
+	width: 2.800vw;
+	left: 64.343vw;
 	top: 207px;
 	border: 2px solid #FFFFFF;
 	z-index:2;
@@ -280,31 +283,50 @@ footer p {
 
 .about-logo {
 	position: absolute;
-	left: 885px;
+	left: 50.571vw;
 	top: 122px;
 	z-index:2;
+} */
+
+/* .text-wrapper {
+	/* position: relative;
+	left: 52vw;
+	top: 
+	height: 20vh;
+	width: 34.722vw; */
+
+	/* height: 25vh;
+	width: 36vw;
+	left: 54.6vw;
+	bottom: 300px; */
+	/* top:0;
+	left:0; */
+
+.about-page-container {
+	position:relative;
+	width:100%;
+	height:auto;
 }
 
 .about-text {
 	position: absolute;
-	height: 202px;
-	width: 632px;
-	left: 1126px;
-	top: 242px;
+	top:19%;
+	left:55.7%;
+	width:35vw;
 	font-family: "Helvetica Neue";
 	font-style: normal;
 	font-weight: normal;
-	font-size: 20px;
-	line-height: 23px;
-	color: #B3B3B3;
+	font-size: 1vw;
+	line-height: 1.4375em;
+	color: #B2B2b2;
 	z-index:2;
 }
 
-.creators-block {
+/* .creators-block {
 	position: absolute;
 	height: 498px;
-	width: 528px;
-	left: 270px;
+	width: 30.171vw;
+	left: 15.429vw;
 	top: 557px;
 	border-radius: 0px;
 	background: #000000;
@@ -313,84 +335,83 @@ footer p {
 
 .creators-logo {
 	position: absolute;
-	left: 324px;
+	left: 18.514vw;
 	top: 923px;
+	width:24.171vw;
 	border-radius: 0px;
 	z-index:2;
 }
 
 .yoon-name-tag {
 	position: absolute;
-	left: 294px;
+	left: 16.800vw;
 	top: 589px;
+	width:7.200vw;
 	border-radius: 0px;
 	z-index:2;
-}
+} */
 
 .yoon-text {
 	position: absolute;
-	height: 47px;
-	width: 426px;
-	left: 297px;
-	top: 634px;
+	top: 53%;
+	left: 8%;
+	width:24.343vw;
 	font-family: 'Helvetica Neue';
 	font-style: normal;
 	font-weight: normal;
-	font-size: 20px;
-	line-height: 24px;
-	color: #FFFFFF;
-	border-radius: 0px;
+	font-size: 1vw;
+	line-height: 1.5em;
+	color: #b2b2b2;
 	z-index:2;
 }
 
-.jeongin-name-tag {
+/* .jeongin-name-tag {
 	position: absolute;
-	left: 294px;
+	left: 16.800vw;
 	top: 726px;
+	width:6.571vw;
 	border-radius: 0px;
 	z-index:2;
-}
+} */
 
 .jeongin-text {
 	position: absolute;
-	height: 46px;
-	width: 426px;
-	left: 297px;
-	top: 771px;
+	top: 63%;
+	left: 8%;
+	width:15vw;
 	font-family: 'Helvetica Neue';
 	font-style: normal;
 	font-weight: normal;
-	font-size: 20px;
-	line-height: 24px;
-	color: #FFFFFF;
-	border-radius: 0px;
+	font-size: 1vw;
+	line-height: 1.5em;
+	color: #b2b2b2;
 	z-index:2;
 }
 
-.z-invert {
+/* .z-invert {
 	position: absolute;
-	left: 1420px;
+	left: 81.143vw;
 	top: 892px;
 	border-radius: 0px;
 	z-index:2;
 }
 
 .l-invert {position: absolute;
-	left: 1002px;
+	left: 57.257vw;
 	top: 853px;
 	border-radius: 0px;
 	z-index:2;
 }
 
 .i {position: absolute;
-	left: 835px;
+	left: 47.714vw;
 	top: 579px;
 	border-radius: 0px;
 	z-index:2;
 }
 
 .h {
-	left: 1527px;
+	left: 87.257vw;
 	top: 676px;	
 	border-radius: 0px;	
 	position: absolute;
@@ -398,7 +419,7 @@ footer p {
 }
 
 .g {
-	left: 1225px;
+	left: 70vw;
 	top: 931px;
 	border-radius: 0px;
 	border-radius: 0px;
@@ -407,7 +428,7 @@ footer p {
 }
 
 .f {
-	left: 1662px;
+	left: 94.971vw;
 	top: 920px;	
 	border-radius: 0px;
 	position: absolute;
@@ -415,7 +436,7 @@ footer p {
 }
 
 .img4 {
-	left: 702px;
+	left: 40.114vw;
 	top: 407px;
 	border-radius: 0px;
 	position: absolute;
@@ -423,12 +444,12 @@ footer p {
 }
 
 .img9 {
-	left: 184px;
+	left: 10.514vw;
 	top: 53px;
 	border-radius: 0px;
 	position: absolute;
-	z-index:2;
-}
+	z-index:2; }*/
+
 
 /* For mobile phones: */
 [class*="col-"] {
