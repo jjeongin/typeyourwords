@@ -42,7 +42,7 @@ def convert_word(word):
                 alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '.png')
             else:
                 # alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/' + alpha + ' invert.png')
-                alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + ' invert.png')
+                alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '_invert.png')
         
         # Fix the upper left corner of the image
         arranged = False
