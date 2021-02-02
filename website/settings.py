@@ -24,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 ##### ONLY FOR LOCAL ENV
 
 # For production env
-SECRET_KEY = os.environ.get('SECRET_KEY')
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'cm0fp+go0$)bn1v7+m#^=g2=8la*_o6#l9_9u6u1&t*5(lr=nq'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -32,8 +33,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost',
-    # 'www.typeyourwords.com',
+    # 'localhost',
+    'www.typeyourwords.com',
 ]
 
 
@@ -124,7 +125,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -139,6 +139,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'project0/static/')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'project0/media/')
 
-IMAGEFIT_ROOT = 'project0'
+# IMAGEFIT_ROOT = 'project0'
 # Use this instead for the pythonanywhere env
-# IMAGEFIT_ROOT = 'typeyourwords/project0'
+IMAGEFIT_ROOT = 'typeyourwords/project0'

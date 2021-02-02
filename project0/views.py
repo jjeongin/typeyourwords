@@ -31,18 +31,26 @@ def convert_word(word):
     for alpha in word:
         if alpha.isdigit() == True:
             # Use following path for pythonanywhere env
-            # alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/' + alpha + '.png')
-            alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '.png')
+            alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/' + alpha + '.png')
+            # alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '.png')
+        elif alpha == " ":
+            rand = randint(0,1)
+            if rand == 0:
+                alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/space.png')
+                # alpha_img = Image.open(path + '/project0/static/alphas/space.png')
+            else:
+                alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/space_invert.png')
+                # alpha_img = Image.open(path + '/project0/static/alphas/space_invert.png')
         else:
             alpha = alpha.lower()
             # Open the alphabet image
             rand = randint(0,1)
             if rand == 0:
-                # alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/' + alpha + '.png')
-                alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '.png')
+                alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/' + alpha + '.png')
+                # alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '.png')
             else:
-                # alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/' + alpha + ' invert.png')
-                alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '_invert.png')
+                alpha_img = Image.open(path + '/typeyourwords/project0/static/alphas/' + alpha + ' invert.png')
+                # alpha_img = Image.open(path + '/project0/static/alphas/' + alpha + '_invert.png')
         
         # Fix the upper left corner of the image
         arranged = False
