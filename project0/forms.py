@@ -6,7 +6,3 @@ class WordForm(forms.ModelForm):
     class Meta:
         model = Word
         fields = ['word',]
-        # widgets = {
-        #     'img_w': forms.HiddenInput,
-        #     'img_h': forms.HiddenInput
-        # }

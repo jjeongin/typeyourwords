@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,14 +24,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 ##### ONLY FOR LOCAL ENV
 
+# For local
+# SECRET_KEY = config('SECRET_KEY',default='')
 # For production env
-# SECRET_KEY = os.environ.get('SECRET_KEY')
-SECRET_KEY = 'cm0fp+go0$)bn1v7+m#^=g2=8la*_o6#l9_9u6u1&t*5(lr=nq'
-
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
 DEBUG = True
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
 
 ALLOWED_HOSTS = [
     # 'localhost',
@@ -48,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'imagefit',
+    'livereload',
     'project0'
 ]
 
@@ -59,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'livereload.middleware.LiveReloadScript',
 ]
 
 ROOT_URLCONF = 'website.urls'
@@ -141,4 +147,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'project0/media/')
 
 # IMAGEFIT_ROOT = 'project0'
 # Use this instead for the pythonanywhere env
-IMAGEFIT_ROOT = 'typeyourwords/project0'
+# IMAGEFIT_ROOT = 'typeyourwords/project0'
+IMAGEFIT_ROOT = os.path.join(BASE_DIR, 'project0')
