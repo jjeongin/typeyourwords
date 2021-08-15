@@ -10,5 +10,4 @@ urlpatterns = [
     path('<int:pk>/', views.output_image, name='output_image'),
     path('archive/', views.output_list, name='archive'),
     path('about/', views.about_page, name='about'),
-    # path('')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
