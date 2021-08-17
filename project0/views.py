@@ -98,8 +98,6 @@ def input_bar(request):
     if request.method == 'POST':
         form = WordForm(request.POST)
         if form.is_valid():
-            # img_w = form.cleaned_data['img_w']
-            # img_h = form.cleaned_data['img_h']
             img_content = convert_word(form.cleaned_data['word'])
             word = form.save()
             if bg_color == "w":
