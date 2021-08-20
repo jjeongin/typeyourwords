@@ -24,4 +24,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'typeyourwords/project0/static/') # pythona
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'typeyourwords/project0/media/') # pythonanywhere virtualenv
 
-IMAGEFIT_ROOT = os.path.join(BASE_DIR, 'typeyourwords/project0') # pythonanywhere virtualenv
+IMAGEFIT_ROOT = os.path.join(BASE_DIR, 'typeyourwords/project0/') # pythonanywhere virtualenv
