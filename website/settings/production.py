@@ -19,9 +19,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'typeyourwords/project0/static/') # pythonanywhere virtualenv
+STATIC_ROOT = os.path.join(BASE_DIR, 'project0/static/') # pythonanywhere virtualenv
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'typeyourwords/project0/media/') # pythonanywhere virtualenv
+MEDIA_ROOT = os.path.join(BASE_DIR, 'project0/media/') # pythonanywhere virtualenv
 
 IMAGEFIT_ROOT = os.path.join(BASE_DIR, 'project0/') # pythonanywhere virtualenv

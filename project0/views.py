@@ -31,21 +31,21 @@ def convert_word(word):
     shuffle(word)
     for alpha in word:
         if alpha.isdigit() == True:
-            alpha_img = Image.open(settings.STATIC_ROOT + '/alphas/' + alpha + '.png')
+            alpha_img = Image.open(settings.STATIC_ROOT + 'alphas/' + alpha + '.png')
         elif alpha == " ":
             rand = randint(0,1)
             if rand == 0:
-                alpha_img = Image.open(settings.STATIC_ROOT + '/alphas/space.png')
+                alpha_img = Image.open(settings.STATIC_ROOT + 'alphas/space.png')
             else:
-                alpha_img = Image.open(settings.STATIC_ROOT + '/alphas/space_invert.png')
+                alpha_img = Image.open(settings.STATIC_ROOT + 'alphas/space_invert.png')
         else:
             alpha = alpha.lower()
             # Open the alphabet image
             rand = randint(0,1)
             if rand == 0:
-                alpha_img = Image.open(settings.STATIC_ROOT + '/alphas/' + alpha + '.png')
+                alpha_img = Image.open(settings.STATIC_ROOT + 'alphas/' + alpha + '.png')
             else:
-                alpha_img = Image.open(settings.STATIC_ROOT + '/alphas/' + alpha + '_invert.png')
+                alpha_img = Image.open(settings.STATIC_ROOT + 'alphas/' + alpha + '_invert.png')
         
         # Fix the upper left corner of the image
         arranged = False
