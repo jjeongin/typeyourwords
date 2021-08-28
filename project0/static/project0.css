@@ -308,7 +308,7 @@ footer p {
 	.col-s-11 {width: 91.66%;}
 	.col-s-12 {width: 100%;}
 	.dropdown-content {min-width: 50px;}
-	.dropdown-content a {font-size: 22px; padding: 20px 10px;}
+	.dropdown-content a {font-size: 22px; padding: 30px 10px;}
 } 
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
