@@ -11,4 +11,5 @@ SESSION_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = [
     'www.typeyourwords.com',
+    # 'yoonjoocho.pythonanywhere.com',
 ]
