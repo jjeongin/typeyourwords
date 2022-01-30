@@ -1,0 +1,13 @@
+{% extends 'project0/base.html' %}
+
+{% block content %}
+
+<center>
+  <form id="input-form" method="POST" class="input-bar">
+    {% csrf_token %}
+    <input type="text" id="word" name="word" placeholder="Type Your Words">
+    <input id="submit" type="submit" style="display: none"/>
+  </form>
+</center>
+
+{% endblock %}

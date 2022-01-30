@@ -1,0 +1,23 @@
+{% extends 'project0/base.html' %}
+{% load imagefit %}
+{% load static %}
+
+{% block content %}
+<div class="archive-container">
+    <div class="archive">
+        {% for word in words %}
+            <div class="word">
+                <img src="{{ word.image.url|resize:'900x900,C' }}" class=word-thumb width=300px height=300px/>
+    
+                <a href="{% url 'output_image' pk=word.pk %}">
+                    <div class="date-container">
+                        <div class="word-date">
+                            {{ word.date_format }}
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
