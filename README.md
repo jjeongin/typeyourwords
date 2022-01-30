@@ -7,14 +7,14 @@ Project ***Type Your Words*** is an interactive Django website where users can c
 
 - Yoon Joo Cho
 
-<img src="demo/tyw_yoon.png" width="300px">
+<img src="demo/tyw_yoon.png" width="700px">
 <em>Yoon Joo Cho</em>
 
 Graphic Designer. Student at Maryland Institute College of Art. View more of her work at [@yoon.joo.cho](https://www.instagram.com/yoon.joo.cho/)
 
 - Jeongin Lee
 
-<img src="demo/tyw_jeongin.png" width="300px">
+<img src="demo/tyw_jeongin.png" width="700px">
 <em>Jeongin Lee</em>
 
 Web Developer. Student at NYU Abu Dhabi. View more of her projects at [GitHub](https://github.com/jjeongin) and [LinkedIn](https://www.linkedin.com/in/jeongin-lee-4687401b3/).
