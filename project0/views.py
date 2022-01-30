@@ -30,15 +30,15 @@ def convert_word(word):
     word = list(word)
     shuffle(word)
     for alpha in word:
-        if alpha.isdigit() == True:
+        if alpha.isdigit() == True: # if input is number
             alpha_img = Image.open(settings.STATIC_ROOT + 'alphas/' + alpha + '.png')
-        elif alpha == " ":
+        elif alpha == " ": # if input is space
             rand = randint(0,1)
             if rand == 0:
                 alpha_img = Image.open(settings.STATIC_ROOT + 'alphas/space.png')
             else:
                 alpha_img = Image.open(settings.STATIC_ROOT + 'alphas/space_invert.png')
-        else:
+        elif alpha.isalpha() : # if input is alphabet
             alpha = alpha.lower()
             # Open the alphabet image
             rand = randint(0,1)
@@ -46,6 +46,8 @@ def convert_word(word):
                 alpha_img = Image.open(settings.STATIC_ROOT + 'alphas/' + alpha + '.png')
             else:
                 alpha_img = Image.open(settings.STATIC_ROOT + 'alphas/' + alpha + '_invert.png')
+        else: # else, ignore the character
+            continue
         
         # Fix the upper left corner of the image
         arranged = False
